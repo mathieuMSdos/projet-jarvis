@@ -1,0 +1,115 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+
+/*  scss color variables */
+$background-color: #24293e;
+$component-bg-color: #2f3855;
+$navBar-bg-color: #0e1018;
+$title-color: #f7f7ff;
+$text-color: #dbdbdb;
+$dark-text-color: #404040;
+$less-important-text-color: #acacac;
+$important-element-color: #8ebbfe;
+$most-important-element-color: #40c982;
+$alternative-sexy-touch: #fc9e4f;
+$forbidden-color: #fc4f5a;
+$border-color: #ffffff38;
+$input-bg: #ffffff17;
+
+$margin-top-page-no-nav-bar: 1rem;
+$margin-top-page-with-nav-bar: 6rem;
+
+// exported color
+:export {
+  importantElementColor: #8ebbfe;
+  mostImportantElementColor: #40c982;
+  alternativeSexyTouch: #fc9e4f;
+
+}
+
+/*  scss font variables */
+
+$main-font: "Mulish", sans-serif;
+
+// Mixin
+@mixin bg-color {
+  background: linear-gradient(
+    0deg,
+    rgba($background-color, $alpha: 1) 38%,
+    rgba($background-color, $alpha: 0.9) 100%
+  );
+}
+
+@mixin components-bg-shadow {
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.317);
+}
+
+/* reset browser default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $text-color;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  font-family: $main-font;
+  @include bg-color;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1rem;
+    color: $text-color ;
+
+  }
+
+  h1,
+  h2 {
+    color: $title-color;
+  }
+
+  h1{
+    font-size: 1.7rem;
+  }
+
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: unset;
+  }
+}
+
+// custom scrollbar
+::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: $component-bg-color;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $most-important-element-color;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}

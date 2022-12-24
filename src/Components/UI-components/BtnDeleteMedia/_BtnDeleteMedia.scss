@@ -1,0 +1,58 @@
+
+.BtnDeleteMedia__container {
+  cursor: pointer;
+  opacity: 0.8;
+  width: 2.6rem;
+  padding: 0.4rem 0.3rem;
+  background-color: $forbidden-color;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 0.6rem;
+  border-radius: 0.3rem;
+  transition: 0.3s ease-in-out;
+  transition: background-color transform 0.2s ease;
+  overflow: hidden;
+  user-select: none;
+
+  p {
+    display: none;
+    opacity: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $title-color;
+  }
+
+  &:hover {
+    opacity: 1;
+    padding: 0.9rem 0.3rem;
+
+    width: 8.4rem;
+    justify-content: flex-end;
+
+    &:active {
+      background-color: red;
+      transform: scale(0.9);
+    }
+
+    p {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  i {
+    font-size: 1.5rem;
+    color: $title-color;
+    margin-right: 0.3rem;
+  }
+}
+
+// @keyframes stretch-anim {
+//   from {
+//     width: 0rem;
+//   }
+//   to {
+//     width: 10rem;
+//   }
+// }

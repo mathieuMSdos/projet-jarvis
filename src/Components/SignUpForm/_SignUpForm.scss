@@ -1,0 +1,127 @@
+.signUp__form-container {
+  height: fit-content;
+  width: 480px;
+  background-color: $component-bg-color;
+  border-radius: 20px;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+  color: $most-important-element-color;
+
+  .signUp__title-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4rem;
+    justify-content: center;
+    align-items: flex-start;
+
+    h2 {
+      margin: 0 !important;
+      color: $important-element-color;
+      font-weight: 800;
+      font-size: 1.6rem !important;
+    }
+
+    h3 {
+      color: $less-important-text-color;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    row-gap: 1rem;
+    button,
+    fieldset,
+    input,
+    legend,
+    select,
+    textarea {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-color: transparent;
+    }
+
+    input,
+    select,
+    textarea {
+      border: 2px solid $border-color;
+      background-color: $input-bg;
+      border-radius: 15px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"],
+    select,
+    textarea {
+      font: 1rem;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0.7rem 0.75rem;
+      color: $dark-text-color;
+      font-weight: 800;
+      font-family: $main-font;
+      color: $important-element-color;
+
+      &::placeholder {
+        color: $less-important-text-color;
+      }
+    }
+
+    // change autofill background color to regular background color input
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+      -webkit-text-fill-color: $important-element-color !important;
+    }
+
+
+    .signUp__inputs-container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      line-height: 1.5rem;
+    }
+
+    .button {
+      cursor: pointer;
+      height: 50px;
+      width: fit-content;
+      padding: 10px 30px;
+      border-radius: 15px;
+      border: none;
+      background-color: $most-important-element-color;
+      font-size: 1rem;
+      color: $title-color;
+      width: auto;
+    }
+  }
+
+  .signUp__error-messages {
+    h3 {
+      margin: 0 !important;
+      color: $less-important-text-color;
+      font-weight: 600;
+      font-size: 1rem !important;
+      line-height: 2rem;
+    }
+  }
+  p{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $most-important-element-color;
+  }
+}

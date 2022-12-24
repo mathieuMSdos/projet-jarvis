@@ -1,0 +1,17 @@
+.lastMediaAdded__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  padding: 1rem;
+  background-color: $component-bg-color;
+  border-radius: 7px;
+
+  .lastMediaAdded__header {
+  }
+
+  .lastMediaAdded__card-container {
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+  }
+}

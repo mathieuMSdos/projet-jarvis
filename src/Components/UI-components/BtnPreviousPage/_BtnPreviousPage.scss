@@ -1,0 +1,46 @@
+.Btn-previous-page {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  column-gap: 0.3rem;
+  border-radius: 7px;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+  background-color: $most-important-element-color;
+
+  transition: 0.3s;
+
+  p {
+    display: none;
+    opacity: 0;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: $title-color;
+  }
+
+  &:hover {
+    opacity: 1;
+    width: 6rem;
+    height: 2.5rem;
+    justify-content: center;
+
+    &:active {
+      transform: scale(0.9);
+    }
+
+    p {
+      display: block;
+      opacity: 1;
+
+    }
+  }
+
+  i {
+    font-size: 1.6rem;
+    // padding: 0.25rem;
+    padding-right: 0;
+  }
+}

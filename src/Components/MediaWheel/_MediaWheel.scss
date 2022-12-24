@@ -1,0 +1,19 @@
+.mediaWheel__component-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  padding-top: 0;
+  overflow: hidden;
+
+  .mediaWheel__header {
+    text-align: left;
+  }
+
+  .mediaWheel__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

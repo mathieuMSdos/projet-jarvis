@@ -1,0 +1,47 @@
+.BtnAddMediaToLib__container {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem 0.5rem;
+  column-gap: 0.5rem;
+  background-color: $most-important-element-color;
+  border-radius: 7px;
+  overflow: hidden;
+
+  &:hover {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      animation: hover-btn 0.6s ease forwards;
+      z-index: -1;
+      background-color: $alternative-sexy-touch;
+    }
+  }
+
+  i {
+    font-size: 1.5rem;
+    color: $title-color;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $title-color;
+  }
+}
+
+@keyframes hover-btn {
+  from {
+    height: 0px;
+    width: 0px;
+  }
+  to {
+    height: 300px;
+    width: 300px;
+  }
+}

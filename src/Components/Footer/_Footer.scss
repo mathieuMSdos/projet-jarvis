@@ -1,0 +1,29 @@
+.footer__container {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  // background-color: orange;
+
+  .footer_links-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 2rem;
+  }
+
+  p,
+  i {
+    font-size: 0.8rem;
+    color: $less-important-text-color;
+  }
+
+  .rights__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    column-gap: 0.3rem;
+  }
+}

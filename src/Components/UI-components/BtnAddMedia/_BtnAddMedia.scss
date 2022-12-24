@@ -1,0 +1,22 @@
+.BtnAddMedia__container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem 1.4rem;
+  column-gap: 0.5rem;
+
+  background-color: $important-element-color;
+  background-color: $alternative-sexy-touch;
+  border-radius: 7px;
+
+  i {
+    font-size: 1.7rem;
+    color: $title-color;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $title-color;
+  }
+}

@@ -1,0 +1,31 @@
+.legalNotices__container {
+    display: flex;
+    width: 70%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 7rem;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: $component-bg-color;
+    flex-direction: column;
+
+    .legalNotices__h1 {
+        align-self: center;
+        text-transform: uppercase;
+        padding-bottom: 2rem;
+        padding-top: 3rem;
+        color: $most-important-element-color;
+    }
+
+    .legalNotices__content{
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    span {
+        color: $most-important-element-color;
+        font-size: 1.5rem;
+        padding: 3rem;
+    }
+}

@@ -1,0 +1,36 @@
+.button__randomMediaWheel-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+
+
+  .button__randomMediaWheel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: $most-important-element-color;
+    overflow: hidden;
+
+
+    &:hover {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        animation: hover-btn 0.6s ease forwards;
+        z-index: -1;
+        background-color: $alternative-sexy-touch;
+      }
+    }
+
+
+  p{
+    white-space: nowrap;
+  }
+  }
+}

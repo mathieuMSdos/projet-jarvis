@@ -1,0 +1,37 @@
+.contact__container {
+  display: flex;
+  margin: auto;
+  width: 70%;
+  height: fit-content;
+  margin-top: 3rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: $component-bg-color;
+  flex-direction: column;
+  padding: 2rem;
+
+  .contact__h1 {
+    text-align: left;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    color: $most-important-element-color;
+  }
+
+  .contact__content {
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    flex-direction: column;
+    line-height: 3rem;
+    font-size: 1.5rem;
+
+    h4 {
+      margin-top: 1.2rem;
+      margin-bottom: 0.1rem;
+    }
+  }
+
+  span {
+    color: $most-important-element-color;
+  }
+}
