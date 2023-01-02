@@ -18,7 +18,7 @@ export const BtnRandomMediaWheel = ({ mediaListData, randomItem, bgColor }) => {
         onClick={() => handleClick(mediaListData)}
         className="button__randomMediaWheel"
       >
-        <p> Film au hasard</p>
+        <p>Suggestion</p>
       </button>
     </div>
   );

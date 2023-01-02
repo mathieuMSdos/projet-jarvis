@@ -58,3 +58,21 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .privateHome__content-container {
+    row-gap: 2rem;
+    flex-direction: column;
+
+    .privateHome__header{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .privateHome__header{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+}
