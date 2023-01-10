@@ -25,9 +25,7 @@ export const Contacts = () => {
           <li>
             <span>Mathieu Mehdi Souzani :</span> Lead-Front
           </li>
-          <li>
-            <span>Melvyn Dehm :</span> Git Master
-          </li>
+
           <li>
             <span>Edouard Martin :</span> Réferent Techno
           </li>
