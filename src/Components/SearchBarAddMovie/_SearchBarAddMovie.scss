@@ -1,4 +1,4 @@
-.searchBarAddMedia__container {
+.SearchBarAddMovie__container {
   height: fit-content;
   width: 59%;
   min-width: 400px;
@@ -6,7 +6,7 @@
   border-radius: 17px;
   padding: 1rem;
   display: flex;
-    // background-color: yellow;
+  // background-color: yellow;
 
   form {
     display: flex;
@@ -45,8 +45,6 @@
       &::placeholder {
         color: $less-important-text-color;
       }
-      
     }
-
   }
 }

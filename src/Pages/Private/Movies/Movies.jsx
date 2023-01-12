@@ -79,12 +79,12 @@ export const Movies = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         <SearchBar />
-        <BtnAddMedia />
+        <BtnAddMedia
+          btnLabel={"Ajouter un film"}
+          btnUrl={"/private/private-add-movie"}
+        />{" "}
       </motion.div>
-      <div
-        className="yourMovie__show-container"
-     
-      >
+      <div className="yourMovie__show-container">
         {searchMovie ? (
           <>
             {searchMovie !== "noResult" ? (

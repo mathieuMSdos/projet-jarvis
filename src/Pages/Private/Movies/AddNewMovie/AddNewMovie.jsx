@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { CardsAll } from "../../../Components/CardsAll/CardsAll";
-import { SearchBarAddMedia } from "../../../Components/SearchBarAddMedia/SearchBarAddMedia";
-import { setAddMovieSearch } from "../../../ReduxToolKit/Reducers/addMovieSearch.slice";
+import { CardsAll } from "../../../../Components/CardsAll/CardsAll";
+import { SearchBarAddMovie } from "../../../../Components/SearchBarAddMovie/SearchBarAddMovie";
+import { setAddMovieSearch } from "../../../../ReduxToolKit/Reducers/addMovieSearch.slice";
 
-export const AddNewMedia = () => {
+export const AddNewMovie = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -12,14 +12,14 @@ export const AddNewMedia = () => {
   }, []);
 
   return (
-    <div className="AddNewMedia__container">
-      <div className="AddNewMedia__header">
+    <div className="AddNewMovie__container">
+      <div className="AddNewMovie__header">
         <h1>Ajouter un média à votre bibliothèque de films</h1>
       </div>
-      <div className="AddNewMedia__actions">
-        <SearchBarAddMedia />
+      <div className="AddNewMovie__actions">
+        <SearchBarAddMovie />
       </div>
-      <div className="AddNewMedia__show-container">
+      <div className="AddNewMovie__show-container">
         <CardsAll
           title={"Résultats : "}
           emptySearchMessage={

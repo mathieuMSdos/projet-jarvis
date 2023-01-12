@@ -1,0 +1,39 @@
+.yourTvShows__container {
+    margin-top: $margin-top-page-with-nav-bar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 95vh;
+    height: 100%;
+    row-gap: 1rem;
+    
+  
+    .yourTvShows__header {
+      width: 100%;
+    }
+  
+    .yourTvShows__actions {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background-color: $component-bg-color;
+      border-radius: 13px;
+    }
+  
+    .yourTvShows__show-container {
+      display: flex;
+      // height: 100%;
+      // width: 100%;
+      width: fit-content;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      column-gap: 1rem;
+      row-gap: 1rem;
+      border-radius: 13px;
+      padding: 2rem;
+      background-color: $component-bg-color;
+    }
+  }
+  

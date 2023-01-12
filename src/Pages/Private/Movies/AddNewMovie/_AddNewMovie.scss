@@ -1,4 +1,4 @@
-.AddNewMedia__container {
+.AddNewMovie__container {
   margin-top: $margin-top-page-with-nav-bar;
   position: relative;
   display: flex;
@@ -8,11 +8,11 @@
   height: 100%;
   row-gap: 1rem;
 
-  .AddNewMedia__header {
+  .AddNewMovie__header {
     width: 100%;
   }
 
-  .AddNewMedia__actions {
+  .AddNewMovie__actions {
     width: 100%;
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@
     border-radius: 13px;
   }
 
-  .AddNewMedia__show-container {
+  .AddNewMovie__show-container {
     display: flex;
     height: 100%;
     width: 100%;

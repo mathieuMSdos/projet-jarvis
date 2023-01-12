@@ -52,10 +52,11 @@ export const SingleCard = ({
         </div>
 
         <div className="singleCard__content-container">
-          <h1>{mediaDatas.title}</h1>
+          {/* conditional show here is necessary because "title" is called "name" in tvShowApi */}
+          <h1>{mediaDatas.title ? mediaDatas.title : mediaDatas.name}</h1>
           <div className="resume__container">
             {mediaDatas.overview ? (
-              <p>{mediaDatas.overview} </p>
+              <p>{mediaDatas.overview}</p>
             ) : (
               "Synopsis non disponible"
             )}

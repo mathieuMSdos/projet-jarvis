@@ -21,8 +21,8 @@
 @import "../Components/LastMediasAdded/LastMediasAdded";
 @import "../Components/LastMediasAdded/CardLastMediasAdded/CardLastMediasAdded";
 @import "../Components/UI-components/AnimatedTitle/AnimatedTitle";
-@import "../Pages/Private/AddNewMedia/AddNewMedia";
-@import "../Components/SearchBarAddMedia/SearchBarAddMedia";
+@import "../Pages/Private/Movies/AddNewMovie/AddNewMovie";
+@import "../Components/SearchBarAddMovie/SearchBarAddMovie";
 @import "../Components/UI-components/BtnAddMediaToLib/BtnAddMediaToLib";
 @import "../Components/UI-components/BtnDeleteMedia/BtnDeleteMedia";
 @import "../Components/UI-components/BtnRandomMediaWheel/BtnRandomMediaWheel";
@@ -31,3 +31,5 @@
 @import "../Components/UI-components/BtnPreviousPage/BtnPreviousPage";
 @import "../Pages/Contacts/Contacts";
 @import "../Pages/LegalNotices/LegalNotices";
+@import "../Pages/Private/TvShows/AddNewTvShow/AddNewTvShow";
+@import "../Components/SearchBarAddTvShow/SearchBarAddTvShow";

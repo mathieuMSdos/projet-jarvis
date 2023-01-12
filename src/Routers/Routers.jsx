@@ -10,10 +10,11 @@ import { TvShows } from "../Pages/Private/TvShows/TvShows";
 import { AvailableSoon } from "../Pages/Private/AvailableSoon/AvailableSoon";
 import { Favorites } from "../Pages/Private/Favorites/Favorites";
 import { ShowMedia } from "../Pages/Private/ShowMedia/ShowMedia";
-import { AddNewMedia } from "../Pages/Private/AddNewMedia/AddNewMedia";
+import { AddNewMovie } from "../Pages/Private/Movies/AddNewMovie/AddNewMovie";
 import { Contacts } from "../Pages/Contacts/Contacts";
 import { LegalNotices } from "../Pages/LegalNotices/LegalNotices";
 import { AnimatePresence } from "framer-motion";
+import { AddNewTvShow } from "../Pages/Private/TvShows/AddNewTvShow/AddNewTvShow";
 
 export const Routers = () => {
   return (
@@ -28,10 +29,7 @@ export const Routers = () => {
           <Route path="/private" element={<Private />}>
             <Route path="/private/private-home" element={<PrivateHome />} />
             <Route path="/private/private-movies" element={<Movies />} />
-            <Route
-              path="/private/private-tvshows"
-              element={<AvailableSoon />}
-            />
+            <Route path="/private/private-tvshows" element={<TvShows />} />
             <Route path="/private/private-music" element={<AvailableSoon />} />
             <Route
               path="/private/private-videogames"
@@ -47,8 +45,12 @@ export const Routers = () => {
               element={<ShowMedia />}
             />
             <Route
-              path="/private/private-add-media"
-              element={<AddNewMedia />}
+              path="/private/private-add-movie"
+              element={<AddNewMovie />}
+            />
+            <Route
+              path="/private/private-add-tvshow"
+              element={<AddNewTvShow />}
             />
           </Route>
         </Routes>

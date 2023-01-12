@@ -5,7 +5,7 @@ import { CommonBtn } from "../UI-components/CommonBtn/CommonBtn";
 import colorScss from "../../Style/_settings.scss";
 import { setAddMovieSearch } from "../../ReduxToolKit/Reducers/addMovieSearch.slice";
 
-export const SearchBarAddMedia = () => {
+export const SearchBarAddMovie = () => {
   const [searchContent, setSearchContent] = useState("");
 
   // redux
@@ -29,7 +29,7 @@ export const SearchBarAddMedia = () => {
   };
 
   return (
-    <div className="searchBarAddMedia__container">
+    <div className="SearchBarAddMovie__container">
       <form onSubmit={handleSubmit}>
         <input
           className="searchInput"

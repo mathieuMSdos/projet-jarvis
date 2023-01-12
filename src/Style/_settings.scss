@@ -33,11 +33,12 @@ $main-font: "Mulish", sans-serif;
 
 // Mixin
 @mixin bg-color {
-  background: linear-gradient(
-    0deg,
-    rgba($background-color, $alpha: 1) 38%,
-    rgba($background-color, $alpha: 0.9) 100%
-  );
+  // background: linear-gradient(
+  //   0deg,
+  //   rgba($background-color, $alpha: 1) 38%,
+  //   rgba($background-color, $alpha: 0.9) 100%
+  // );
+  background-color: $background-color;
 }
 
 @mixin components-bg-shadow {
