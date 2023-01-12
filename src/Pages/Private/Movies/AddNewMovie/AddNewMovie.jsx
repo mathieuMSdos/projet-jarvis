@@ -28,6 +28,8 @@ export const AddNewMovie = () => {
           globalState={"addMovieSearch"}
           showMedia={false}
           addMediaBtn={true}
+          addMovieBtn={true}
+          addTvShowBtn={false}
           deleteMediaBtn={false}
         />
       </div>

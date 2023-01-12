@@ -48,7 +48,7 @@ export const TvShows = () => {
 
     if (token) {
       axios
-        .get(`${apiEndPoints.apiAdress}${apiEndPoints.movies}`, config)
+        .get(`${apiEndPoints.apiAdress}${apiEndPoints.tvshows}`, config)
         .then((res) => {
           setyourTvShowsList(res.data);
         });

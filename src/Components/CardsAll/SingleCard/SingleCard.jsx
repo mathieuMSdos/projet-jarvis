@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { BtnAddMediaToLib } from "../../UI-components/BtnAddMediaToLib/BtnAddMediaToLib";
 import { BtnDeleteMedia } from "../../UI-components/BtnDeleteMedia/BtnDeleteMedia";
+import { BtnAddTvShowToLib } from "../../UI-components/BtnAddTvShowToLib/BtnAddTvShowToLib";
+import { BtnAddMovieToLib } from "../../UI-components/BtnAddMovieToLib/BtnAddMovieToLib";
 
 export const SingleCard = ({
   mediaDatas,
@@ -9,6 +10,8 @@ export const SingleCard = ({
   count,
   showMedia,
   addMediaBtn,
+  addMovieBtn,
+  addTvShowBtn,
   deleteMediaBtn,
 }) => {
   // React router dom part :
@@ -61,8 +64,9 @@ export const SingleCard = ({
               "Synopsis non disponible"
             )}
           </div>
-          <div className="singleCard__btnAddMediaToLib-container">
-            {addMediaBtn && <BtnAddMediaToLib mediaDatas={mediaDatas} />}
+          <div className="singleCard__BtnAddMovieToLib-container">
+            {addMovieBtn && <BtnAddMovieToLib mediaDatas={mediaDatas} />}
+            {addTvShowBtn && <BtnAddTvShowToLib mediaDatas={mediaDatas} />}
           </div>
         </div>
       </motion.div>

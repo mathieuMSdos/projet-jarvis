@@ -29,6 +29,8 @@ export const AddNewTvShow = () => {
           globalState={"addMovieSearch"}
           showMedia={false}
           addMediaBtn={true}
+          addMovieBtn={false}
+          addTvShowBtn={true}
           deleteMediaBtn={false}
         />
       </div>
