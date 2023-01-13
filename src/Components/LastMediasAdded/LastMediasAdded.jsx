@@ -3,7 +3,7 @@ import apiEndPoints from "../../Utils/utilsApi";
 import React, { useEffect, useState } from "react";
 import { CardLastMediasAdded } from "./CardLastMediasAdded/CardLastMediasAdded";
 
-export const LastMediasAdded = ({title, latestData}) => {
+export const LastMediasAdded = ({title, latestData, endPoint}) => {
   const [lastMediaDatas, setLastMediaDatas] = useState();
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export const LastMediasAdded = ({title, latestData}) => {
                 count={index}
                 key={index}
                 mediaDatas={item}
-                endPoint={"movies"}
+                endPoint={endPoint}
               />
             ))}
           </>

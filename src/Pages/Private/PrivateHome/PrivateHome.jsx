@@ -106,6 +106,7 @@ export const PrivateHome = () => {
         <LastMediasAdded
           title={"Derniers films ajoutés"}
           latestData={"latestMovie"}
+          endPoint={"movies"}
         />
       </motion.div>
 
@@ -119,6 +120,7 @@ export const PrivateHome = () => {
         <LastMediasAdded
           title={"Dernières séries ajoutées"}
           latestData={"latestTvShow"}
+          endPoint={"tvshows"}
         />
       </motion.div>
     </div>

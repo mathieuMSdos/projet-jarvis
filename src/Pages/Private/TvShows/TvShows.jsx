@@ -94,7 +94,7 @@ export const TvShows = () => {
                     count={index}
                     key={index}
                     mediaDatas={mediaDatas}
-                    endPoint={"movies"}
+                    endPoint={"tvshows"}
                     showMedia={true}
                     addMediaBtn={false}
                     deleteMediaBtn={true}
@@ -119,7 +119,7 @@ export const TvShows = () => {
                     count={index}
                     key={index}
                     mediaDatas={mediaDatas}
-                    endPoint={"movies"}
+                    endPoint={"tvshows"}
                     showMedia={true}
                     addMediaBtn={false}
                     deleteMediaBtn={true}
