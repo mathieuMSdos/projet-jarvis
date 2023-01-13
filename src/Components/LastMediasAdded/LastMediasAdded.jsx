@@ -3,7 +3,7 @@ import apiEndPoints from "../../Utils/utilsApi";
 import React, { useEffect, useState } from "react";
 import { CardLastMediasAdded } from "./CardLastMediasAdded/CardLastMediasAdded";
 
-export const LastMediasAdded = ({title, data}) => {
+export const LastMediasAdded = ({title, latestData}) => {
   const [lastMediaDatas, setLastMediaDatas] = useState();
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export const LastMediasAdded = ({title, data}) => {
       axios
         .get(`${apiEndPoints.apiAdress}${apiEndPoints.home}`, config)
         .then((res) => {
-          setLastMediaDatas(res.data.latestMovie);
+          setLastMediaDatas(res.data[latestData]);
         });
     }
   }, []);

@@ -36,7 +36,7 @@ export const PrivateHome = () => {
         .get(`${apiEndPoints.apiAdress}${apiEndPoints.home}`, config)
         .then((res) => {
           setUserName(res.data.name);
-          dispatch(setUserRole(res.data.role[0]))
+          dispatch(setUserRole(res.data.role[0]));
         });
     }
   }, []);
@@ -103,8 +103,23 @@ export const PrivateHome = () => {
         exit={{ x: "-100%" }}
         transition={{ duration: 0.5, delay: 0.6 }}
       >
-        
-        <LastMediasAdded title={"Derniers films ajoutés"} data={"latestMovie"}/>
+        <LastMediasAdded
+          title={"Derniers films ajoutés"}
+          latestData={"latestMovie"}
+        />
+      </motion.div>
+
+      <motion.div
+        className="lastMedias__container"
+        initial={{ x: "-100%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: "-100%" }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+      >
+        <LastMediasAdded
+          title={"Dernières séries ajoutées"}
+          latestData={"latestTvShow"}
+        />
       </motion.div>
     </div>
   );
