@@ -14,7 +14,7 @@ export const AddNewMovie = () => {
   return (
     <div className="AddNewMovie__container">
       <div className="AddNewMovie__header">
-        <h1>Ajouter un média à votre bibliothèque de films</h1>
+        <h1>Ajouter un film à votre bibliothèque</h1>
       </div>
       <div className="AddNewMovie__actions">
         <SearchBarAddMovie />

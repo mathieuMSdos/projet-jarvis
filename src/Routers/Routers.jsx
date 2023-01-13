@@ -15,6 +15,8 @@ import { Contacts } from "../Pages/Contacts/Contacts";
 import { LegalNotices } from "../Pages/LegalNotices/LegalNotices";
 import { AnimatePresence } from "framer-motion";
 import { AddNewTvShow } from "../Pages/Private/TvShows/AddNewTvShow/AddNewTvShow";
+import { MusicAlbum } from "../Pages/Private/MusicAlbum/MusicAlbum";
+import { AddNewMusicAlbum } from "../Pages/Private/MusicAlbum/AddNewMusicAlbum/AddNewMusicAlbum";
 
 export const Routers = () => {
   return (
@@ -30,7 +32,7 @@ export const Routers = () => {
             <Route path="/private/private-home" element={<PrivateHome />} />
             <Route path="/private/private-movies" element={<Movies />} />
             <Route path="/private/private-tvshows" element={<TvShows />} />
-            <Route path="/private/private-music" element={<AvailableSoon />} />
+            <Route path="/private/private-music" element={<MusicAlbum />} />
             <Route
               path="/private/private-videogames"
               element={<AvailableSoon />}
@@ -51,6 +53,10 @@ export const Routers = () => {
             <Route
               path="/private/private-add-tvshow"
               element={<AddNewTvShow />}
+            />
+            <Route
+              path="/private/private-add-music-album"
+              element={<AddNewMusicAlbum />}
             />
           </Route>
         </Routes>
