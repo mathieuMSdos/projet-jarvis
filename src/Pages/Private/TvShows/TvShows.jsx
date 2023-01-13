@@ -78,7 +78,7 @@ export const TvShows = () => {
         exit={{ x: "-100%" }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        <SearchBar />
+        <SearchBar endPoint={"tvshows"} />
         <BtnAddMedia
           btnLabel={"Ajouter une série"}
           btnUrl={"/private/private-add-tvshow"}
@@ -95,7 +95,7 @@ export const TvShows = () => {
                     key={index}
                     mediaDatas={mediaDatas}
                     endPoint={"tvshows"}
-                    showMedia={true}
+                    deleteEndPoint={"delete_tvshow"}                    showMedia={true}
                     addMediaBtn={false}
                     deleteMediaBtn={true}
                   ></SingleCard>
@@ -120,6 +120,7 @@ export const TvShows = () => {
                     key={index}
                     mediaDatas={mediaDatas}
                     endPoint={"tvshows"}
+                    deleteEndPoint={"delete_tvshow"}
                     showMedia={true}
                     addMediaBtn={false}
                     deleteMediaBtn={true}

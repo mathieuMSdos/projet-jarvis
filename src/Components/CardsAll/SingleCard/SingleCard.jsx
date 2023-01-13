@@ -7,6 +7,7 @@ import { BtnAddMovieToLib } from "../../UI-components/BtnAddMovieToLib/BtnAddMov
 export const SingleCard = ({
   mediaDatas,
   endPoint,
+  deleteEndPoint,
   count,
   showMedia,
   addMediaBtn,
@@ -31,7 +32,7 @@ export const SingleCard = ({
     >
       {deleteMediaBtn ? (
         <div className="deleteBtn__container">
-          <BtnDeleteMedia mediaDatas={mediaDatas} />
+          <BtnDeleteMedia mediaDatas={mediaDatas} endPoint={endPoint} deleteEndPoint={deleteEndPoint} />
         </div>
       ) : (
         ""

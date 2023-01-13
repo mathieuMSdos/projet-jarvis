@@ -78,7 +78,7 @@ export const Movies = () => {
         exit={{ x: "-100%" }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        <SearchBar />
+        <SearchBar endPoint={"movies"} />
         <BtnAddMedia
           btnLabel={"Ajouter un film"}
           btnUrl={"/private/private-add-movie"}
@@ -95,6 +95,7 @@ export const Movies = () => {
                     key={index}
                     mediaDatas={mediaDatas}
                     endPoint={"movies"}
+                    deleteEndPoint={"delete_movie"}  
                     showMedia={true}
                     addMediaBtn={false}
                     deleteMediaBtn={true}
@@ -120,6 +121,7 @@ export const Movies = () => {
                     key={index}
                     mediaDatas={mediaDatas}
                     endPoint={"movies"}
+                    deleteEndPoint={"delete_movie"}  
                     showMedia={true}
                     addMediaBtn={false}
                     deleteMediaBtn={true}

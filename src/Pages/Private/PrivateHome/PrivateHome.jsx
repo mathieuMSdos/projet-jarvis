@@ -10,6 +10,7 @@ import { setSearchPrivateHome } from "../../../ReduxToolKit/Reducers/searchPriva
 import axios from "axios";
 import { motion } from "framer-motion";
 import { setUserRole } from "../../../ReduxToolKit/Reducers/userRole.slice";
+import { SearchBarAllMedias } from "../../../Components/SearchBarAllMedias/SearchBarAllMedias";
 
 export const PrivateHome = () => {
   // REDUX PART
@@ -62,8 +63,7 @@ export const PrivateHome = () => {
         exit={{ x: "-100%" }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        <SearchBar />
-        <BtnAddMedia />
+        <SearchBarAllMedias />
       </motion.div>
 
       <div className="privateHome__content-container">

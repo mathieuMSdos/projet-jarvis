@@ -8,7 +8,7 @@ import colorScss from "../../Style/_settings.scss";
 import { motion } from "framer-motion";
 import { setCancelSearch } from "../../ReduxToolKit/Reducers/cancelSearch.slice";
 
-export const SearchBar = ({ endPoint }) => {
+export const SearchBarAllMedias = ({ endPoint }) => {
   // redux
   const dispatch = useDispatch();
   const cancelSearchRedux = useSelector(
@@ -32,29 +32,43 @@ export const SearchBar = ({ endPoint }) => {
       };
 
       if (token) {
+        // Tips axios to make multiple request in same time axios.all
         axios
-          .get(`${apiEndPoints.apiAdress}${apiEndPoints[endPoint]}`, config)
-          .then((res) => {
-            if (res) {
-              let result;
-              result = res.data.filter((item) =>
-                item.title.toLowerCase().includes(searchContent)
-              );
-              if (result.length !== 0) {
-                dispatch(setSearchPrivateHome(result));
+          .all([
+            axios.get(
+              `${apiEndPoints.apiAdress}${apiEndPoints.movies}`,
+              config
+            ),
+            axios.get(
+              `${apiEndPoints.apiAdress}${apiEndPoints.tvshows}`,
+              config
+            ),
+          ])
+          .then(
+            axios.spread((moviesData, tvShowData) => {
+              if (moviesData.data && tvShowData.data) {
+                // to merge all responses array
+                const mergedData = [...moviesData.data, ...tvShowData.data];
+                // to check match or not between user search and title of medias in merged array
+                const result = mergedData.filter((item) =>
+                  item.title.toLowerCase().includes(searchContent)
+                );
+                if (result.length !== 0) {
+                  dispatch(setSearchPrivateHome(result));
 
-                setShowCancelSearchBtn(true);
-              } else {
-                // clear input
-                setSearchContent("");
-                // dispatch(setSearchPrivateHome("noResult"));
+                  setShowCancelSearchBtn(true);
+                } else {
+                  // clear input
+                  setSearchContent("");
+                  // dispatch(setSearchPrivateHome("noResult"));
 
-                console.log("votre recherche n'a pas de résultats");
+                  console.log("votre recherche n'a pas de résultats");
+                }
               }
-            } else {
-              console.log("erreur");
-            }
-          });
+            })
+          );
+      } else {
+        console.log("erreur");
       }
     }
   };
@@ -73,7 +87,7 @@ export const SearchBar = ({ endPoint }) => {
   };
 
   return (
-    <div className="search__bar-container">
+    <div className="SearchBarAllMedias-container">
       <form onSubmit={handleSubmit}>
         <input
           className="searchInput"
@@ -84,7 +98,7 @@ export const SearchBar = ({ endPoint }) => {
         />
         {showCancelSearchBtn ? (
           <motion.div
-            className="searchBar__cancelButton"
+            className="SearchBarAllMedias__cancelButton"
             whileHover={{ y: "-4px" }}
             whileTap={{ scale: 0.9 }}
             onClick={() => {

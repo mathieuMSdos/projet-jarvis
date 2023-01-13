@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setDeleteMediaToggle } from "../../../ReduxToolKit/Reducers/deleteMediaToggle.slice";
 import { PopUpEvent } from "../PopUpEvent/PopUpEvent";
 
-export const BtnDeleteMedia = ({ mediaDatas }) => {
+export const BtnDeleteMedia = ({ mediaDatas, endPoint, deleteEndPoint }) => {
   // Redux part
   const dispatch = useDispatch();
   const addMovieSearchRedux = useSelector(
@@ -35,7 +35,7 @@ export const BtnDeleteMedia = ({ mediaDatas }) => {
 
     if (token) {
       axios
-        .get(`${apiEndPoints.apiAdress}${apiEndPoints.tvshows}`, config)
+        .get(`${apiEndPoints.apiAdress}${apiEndPoints[endPoint]}`, config)
         .then((res) => {
           // all movie in db
           const allDbMovie = res.data;
@@ -61,7 +61,7 @@ export const BtnDeleteMedia = ({ mediaDatas }) => {
             // axios request to delete the movie by his id if movie is inside user data Base
             axios
               .delete(
-                `${apiEndPoints.apiAdress}${apiEndPoints.delete_tvshow}/${IdOfMovieYouWantToDeleted}`,
+                `${apiEndPoints.apiAdress}${apiEndPoints[deleteEndPoint]}/${IdOfMovieYouWantToDeleted}`,
                 config
               )
               .then(() => {
