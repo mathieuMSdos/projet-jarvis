@@ -3,7 +3,7 @@ import apiEndPoints from "../../Utils/utilsApi";
 import React, { useEffect, useState } from "react";
 import { CardLastMediasAdded } from "./CardLastMediasAdded/CardLastMediasAdded";
 
-export const LastMediasAdded = () => {
+export const LastMediasAdded = ({title, data}) => {
   const [lastMediaDatas, setLastMediaDatas] = useState();
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export const LastMediasAdded = () => {
   return (
     <div className="lastMediaAdded__container">
       <div className="lastMediaAdded__header">
-        <h2>Derniers médias ajoutés à votre mediathèque</h2>
+        <h2>{title}</h2>
       </div>
       <div className="lastMediaAdded__card-container">
         {lastMediaDatas ? (

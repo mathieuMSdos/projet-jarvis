@@ -64,7 +64,7 @@ export const LogInForm = () => {
     }
   }, [submit]);
 
-  console.log(errorMessage);
+  // console.log(errorMessage);
 
   return (
     <div className="form__container">

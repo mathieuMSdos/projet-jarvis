@@ -104,7 +104,7 @@ export const PrivateHome = () => {
         transition={{ duration: 0.5, delay: 0.6 }}
       >
         
-        <LastMediasAdded />
+        <LastMediasAdded title={"Derniers films ajoutés"} data={"latestMovie"}/>
       </motion.div>
     </div>
   );

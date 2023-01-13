@@ -35,7 +35,7 @@ export const BtnDeleteMedia = ({ mediaDatas }) => {
 
     if (token) {
       axios
-        .get(`${apiEndPoints.apiAdress}${apiEndPoints.movies}`, config)
+        .get(`${apiEndPoints.apiAdress}${apiEndPoints.tvshows}`, config)
         .then((res) => {
           // all movie in db
           const allDbMovie = res.data;
@@ -61,7 +61,7 @@ export const BtnDeleteMedia = ({ mediaDatas }) => {
             // axios request to delete the movie by his id if movie is inside user data Base
             axios
               .delete(
-                `${apiEndPoints.apiAdress}${apiEndPoints.delete_movie}/${IdOfMovieYouWantToDeleted}`,
+                `${apiEndPoints.apiAdress}${apiEndPoints.delete_tvshow}/${IdOfMovieYouWantToDeleted}`,
                 config
               )
               .then(() => {
