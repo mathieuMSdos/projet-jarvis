@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { LogoJarvis } from "../UI-components/LogoJarvis/LogoJarvis";
 import { setUserLog } from "../../ReduxToolKit/Reducers/userLog.slice";
+import { setSearchPrivateHome } from "../../ReduxToolKit/Reducers/searchPrivateHome.slice";
 
 export const Header = () => {
   // REDUX PART
@@ -77,7 +78,10 @@ export const Header = () => {
     <header className={show ? "" : "headerFade"}>
       <nav className={bgColorNav ? "nav__fix-bg" : ""}>
         <div className="logo__container">
-          <NavLink to="/private/private-home">
+          <NavLink
+            to="/private/private-home"
+            onClick={() => dispatch(setSearchPrivateHome("empty"))}
+          >
             <LogoJarvis />
           </NavLink>
         </div>
@@ -92,7 +96,7 @@ export const Header = () => {
         {(toggleMenu || width > 900) && (
           <div className="list__nav-container">
             <ul>
-              <li>
+              <li onClick={() => dispatch(setSearchPrivateHome("empty"))}>
                 <NavLink
                   onClick={toggleNav}
                   className={({ isActive }) =>
@@ -216,7 +220,6 @@ export const Header = () => {
                   }}
                 >
                   <p>Se déconnecter</p>
-       
                 </motion.div>
               ) : (
                 ""

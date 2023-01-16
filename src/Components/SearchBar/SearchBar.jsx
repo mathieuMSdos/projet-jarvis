@@ -47,6 +47,8 @@ export const SearchBar = ({ endPoint }) => {
               } else {
                 // clear input
                 setSearchContent("");
+                dispatch(setSearchPrivateHome("noResult"));
+
                 // dispatch(setSearchPrivateHome("noResult"));
 
                 console.log("votre recherche n'a pas de résultats");

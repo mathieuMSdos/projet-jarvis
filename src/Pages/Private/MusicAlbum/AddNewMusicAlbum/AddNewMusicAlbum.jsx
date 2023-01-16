@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CardsAll } from "../../../../Components/CardsAll/CardsAll";
 import { SearchBarAddMovie } from "../../../../Components/SearchBarAddMovie/SearchBarAddMovie";
+import { SearchBarAddMusicAlbum } from "../../../../Components/SearchBarAddMusicAlbum/SearchBarAddMusicAlbum";
 import { SearchBarAddTvShow } from "../../../../Components/SearchBarAddTvShow/SearchBarAddTvShow";
 import { setAddMovieSearch } from "../../../../ReduxToolKit/Reducers/addMovieSearch.slice";
 
@@ -18,7 +19,7 @@ export const AddNewMusicAlbum = () => {
         <h1>Ajouter un album à votre bibliothèque</h1>
       </div>
       <div className="addNewMusicAlbum__actions">
-        <SearchBarAddTvShow />
+        <SearchBarAddMusicAlbum />
       </div>
       <div className="addNewMusicAlbum__show-container">
         <CardsAll

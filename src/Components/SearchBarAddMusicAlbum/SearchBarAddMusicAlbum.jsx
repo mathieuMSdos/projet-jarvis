@@ -17,13 +17,14 @@ export const SearchBarAddMusicAlbum = () => {
 
     axios
       .get(
-        `http://api.themoviedb.org/3/search/tv?api_key=489e6804c33c153a74c43a379d22bb39&query=${searchContent}&language=fr-FR&page=1&include_adult=fal`
+        `https://api.discogs.com/database/search?artist=${searchContent}&country=US&format=album&key=tKajdODMGdFxhTozHeNe&secret=sTiuYlQjWlGxIFqVqvvyIFPlmixxOSTn`
       )
       .then((res) => {
         if (res) {
-          dispatch(setAddMovieSearch(res.data.results));
-          // to reset input search
-          setSearchContent("");
+          console.log(res.data.results);
+          // dispatch(setAddMovieSearch(res.data.results));
+          // // to reset input search
+          // setSearchContent("");
         }
       });
   };
