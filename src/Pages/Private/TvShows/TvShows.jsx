@@ -95,9 +95,12 @@ export const TvShows = () => {
                     key={index}
                     mediaDatas={mediaDatas}
                     endPoint={"tvshows"}
-                    deleteEndPoint={"delete_tvshow"}                    showMedia={true}
+                    deleteEndPoint={"delete_tvshow"}
+                    showMedia={true}
                     addMediaBtn={false}
                     deleteMediaBtn={true}
+                    albumCoverUrl={false}
+                    mediaType={"tvshow"}
                   ></SingleCard>
                 ))}
               </>

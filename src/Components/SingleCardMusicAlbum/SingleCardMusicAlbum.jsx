@@ -4,7 +4,7 @@ import { BtnDeleteMedia } from "../../UI-components/BtnDeleteMedia/BtnDeleteMedi
 import { BtnAddTvShowToLib } from "../../UI-components/BtnAddTvShowToLib/BtnAddTvShowToLib";
 import { BtnAddMovieToLib } from "../../UI-components/BtnAddMovieToLib/BtnAddMovieToLib";
 
-export const SingleCard = ({
+export const SingleCardMusicAlbum = ({
   mediaDatas,
   endPoint,
   deleteEndPoint,
@@ -14,8 +14,6 @@ export const SingleCard = ({
   addMovieBtn,
   addTvShowBtn,
   deleteMediaBtn,
-  albumCoverUrl,
-  mediaType,
 }) => {
   // React router dom part :
   const navigate = useNavigate();
@@ -24,31 +22,24 @@ export const SingleCard = ({
 
   // to create a value to set delay in motion framer
   const delayValue = count * 0.1;
+
   return (
     <motion.div
-      className={
-        mediaType === "album"
-          ? "singleCard__global-container album"
-          : "singleCard__global-container"
-      }
+      className="singleCardMusicAlbum__global-container"
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: delayValue }}
     >
       {deleteMediaBtn ? (
         <div className="deleteBtn__container">
-          <BtnDeleteMedia
-            mediaDatas={mediaDatas}
-            endPoint={endPoint}
-            deleteEndPoint={deleteEndPoint}
-          />
+          <BtnDeleteMedia mediaDatas={mediaDatas} endPoint={endPoint} deleteEndPoint={deleteEndPoint} />
         </div>
       ) : (
         ""
       )}
 
       <motion.div
-        className="singleCard__container"
+        className="singleCardMusicAlbum__container"
         style={showMedia ? "" : { cursor: "default" }}
         onClick={() => {
           showMedia &&
@@ -57,41 +48,24 @@ export const SingleCard = ({
             );
         }}
       >
-        <div className="singleCard__img-container">
-          {albumCoverUrl ? (
-            <img src={mediaDatas.cover_image} alt="" />
-          ) : (
-            <img
-              src={`https://image.tmdb.org/t/p/w500${mediaDatas.poster_path}`}
-              alt=""
-            />
-          )}
+        <div className="singleCardMusicAlbum__img-container">
+          <img
+            src={`https://image.tmdb.org/t/p/w500${mediaDatas.poster_path}`}
+            alt=""
+          />
         </div>
 
-        <div className="singleCard__content-container">
+        <div className="singleCardMusicAlbum__content-container">
           {/* conditional show here is necessary because "title" is called "name" in tvShowApi */}
-          <h1>{mediaDatas.title ? mediaDatas.title.length < 50 ? mediaDatas.title : mediaDatas.title.slice() : mediaDatas.name}</h1>
+          <h1>{mediaDatas.title ? mediaDatas.title : mediaDatas.name}</h1>
           <div className="resume__container">
-            {mediaType === "album" ? (
-              <>
-                {mediaDatas.year ? (
-                  <p>{mediaDatas.year}</p>
-                ) : (
-                  "Date de sortie non disponible"
-                )}
-              </>
+            {mediaDatas.overview ? (
+              <p>{mediaDatas.overview}</p>
             ) : (
-              <>
-                {" "}
-                {mediaDatas.overview ? (
-                  <p>{mediaDatas.overview}</p>
-                ) : (
-                  "Synopsis non disponible"
-                )}
-              </>
+              "Synopsis non disponible"
             )}
           </div>
-          <div className="singleCard__BtnAddMovieToLib-container">
+          <div className="singleCardMusicAlbum__BtnAddMovieToLib-container">
             {addMovieBtn && <BtnAddMovieToLib mediaDatas={mediaDatas} />}
             {addTvShowBtn && <BtnAddTvShowToLib mediaDatas={mediaDatas} />}
           </div>

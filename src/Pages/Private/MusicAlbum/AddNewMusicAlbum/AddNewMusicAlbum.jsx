@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CardsAll } from "../../../../Components/CardsAll/CardsAll";
-import { SearchBarAddMovie } from "../../../../Components/SearchBarAddMovie/SearchBarAddMovie";
 import { SearchBarAddMusicAlbum } from "../../../../Components/SearchBarAddMusicAlbum/SearchBarAddMusicAlbum";
-import { SearchBarAddTvShow } from "../../../../Components/SearchBarAddTvShow/SearchBarAddTvShow";
 import { setAddMovieSearch } from "../../../../ReduxToolKit/Reducers/addMovieSearch.slice";
 
 export const AddNewMusicAlbum = () => {
+  // REDUX TOOLKIT PART
   const dispatch = useDispatch();
+  const searchReduxState = useSelector(
+    (state) => state.addMovieSearch.addMovieSearch
+  );
 
   useEffect(() => {
     dispatch(setAddMovieSearch("empty"));
@@ -30,9 +32,11 @@ export const AddNewMusicAlbum = () => {
           globalState={"addMovieSearch"}
           showMedia={false}
           addMediaBtn={true}
-          addMovieBtn={false}
-          addTvShowBtn={true}
+          addMovieBtn={true}
+          addTvShowBtn={false}
           deleteMediaBtn={false}
+          albumCoverUrl={true}
+          mediaType={"album"}
         />
       </div>
     </div>

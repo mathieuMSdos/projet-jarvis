@@ -31,6 +31,8 @@ export const AddNewMovie = () => {
           addMovieBtn={true}
           addTvShowBtn={false}
           deleteMediaBtn={false}
+          albumCoverUrl={false}
+          mediaType={"movie"}
         />
       </div>
     </div>

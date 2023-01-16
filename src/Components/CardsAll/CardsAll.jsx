@@ -12,6 +12,8 @@ export const CardsAll = ({
   addMovieBtn,
   addTvShowBtn,
   deleteMediaBtn,
+  albumCoverUrl,
+  mediaType,
 }) => {
   const searchReduxState = useSelector(
     (state) => state[globalState][globalState]
@@ -57,6 +59,8 @@ export const CardsAll = ({
                       deleteMediaBtn={deleteMediaBtn}
                       addMovieBtn={addMovieBtn}
                       addTvShowBtn={addTvShowBtn}
+                      albumCoverUrl={albumCoverUrl}
+                      mediaType={mediaType}
                     ></SingleCard>
                   ))}
                 </>
