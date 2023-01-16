@@ -58,7 +58,7 @@ export const SearchBarAddMusicAlbum = () => {
         <input
           className="searchInput"
           type="text"
-          placeholder="Recherchez n'importe quelle série à ajouter par son titre"
+          placeholder="Recherchez n'importe quelle album à ajouter par son titre"
           value={searchContent}
           onChange={(e) => setSearchContent(e.target.value)}
         />
