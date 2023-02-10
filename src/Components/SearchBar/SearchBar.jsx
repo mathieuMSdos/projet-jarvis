@@ -80,7 +80,7 @@ export const SearchBar = ({ endPoint }) => {
         <input
           className="searchInput"
           type="text"
-          placeholder="Recherchez un titre dans votre médiathèque..."
+          placeholder="Rechercher un titre dans votre médiathèque..."
           value={searchContent}
           onChange={(e) => setSearchContent(e.target.value)}
         />
@@ -101,7 +101,7 @@ export const SearchBar = ({ endPoint }) => {
         )}
 
         <CommonBtn
-          textContent={"Recherchez"}
+          textContent={"Rechercher"}
           bgColor={colorScss.mostImportantElementColor}
         />
       </form>

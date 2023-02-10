@@ -70,7 +70,13 @@ export const SingleCard = ({
 
         <div className="singleCard__content-container">
           {/* conditional show here is necessary because "title" is called "name" in tvShowApi */}
-          <h1>{mediaDatas.title ? mediaDatas.title.length < 50 ? mediaDatas.title : mediaDatas.title.slice() : mediaDatas.name}</h1>
+          <h1>
+            {mediaDatas.title
+              ? mediaDatas.title.length < 50
+                ? mediaDatas.title
+                : mediaDatas.title.slice()
+              : mediaDatas.name}
+          </h1>
           <div className="resume__container">
             {mediaType === "album" ? (
               <>

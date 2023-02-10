@@ -34,12 +34,12 @@ export const SearchBarAddMovie = () => {
         <input
           className="searchInput"
           type="text"
-          placeholder="Recherchez n'importe quel film à ajouter par son titre"
+          placeholder="Rechercher n'importe quel film à ajouter par son titre"
           value={searchContent}
           onChange={(e) => setSearchContent(e.target.value)}
         />
         <CommonBtn
-          textContent={"Recherchez"}
+          textContent={"Rechercher"}
           bgColor={colorScss.mostImportantElementColor}
         />
       </form>
