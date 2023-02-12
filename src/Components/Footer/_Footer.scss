@@ -23,7 +23,26 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     column-gap: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .footer__container {
+    padding: 1rem 1rem;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1rem;
+
+    .footer_links-container {
+      order: 2;
+    }
+
+    .rights__container{
+      order: 1;
+      display: flex;
+      justify-content: center;
+
+    }
   }
 }
