@@ -20,3 +20,10 @@
     color: $title-color;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .BtnAddMedia__container{
+    width: 50px;
+  }
+
+}

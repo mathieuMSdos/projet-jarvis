@@ -77,3 +77,57 @@
     }
   }
 }
+
+@media screen and (max-width: 420px) {
+  .showMedia__container {
+    width: 100%;
+
+    .showMedia__content-container {
+      display: flex;
+
+
+      span {
+        font-size: calc(0.4rem + 1vw);
+        color: $most-important-element-color;
+      }
+
+      .showMedia__img-container {
+        width: 70%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .mediaShow__text-container {
+        .mediaShow__card-header {
+          h1 {
+            font-size: calc(1rem + 1vw);
+            margin-bottom: 0.5rem;
+          }
+
+          // background-color: orange;
+        }
+
+        .mediaShow__text {
+          h4 {
+            font-size: calc(0.2rem + 1vw);
+          }
+
+          .mediaShow__title-title{
+            font-size: calc(0.3rem + 1vw);
+
+          }
+
+          .overview__container {
+            p {
+              font-size: calc(0.3rem + 1vw);
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

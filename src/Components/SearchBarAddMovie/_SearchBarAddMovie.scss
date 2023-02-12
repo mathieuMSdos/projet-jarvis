@@ -48,3 +48,17 @@
     }
   }
 }
+
+@media screen and (max-width: 420px) {
+  .SearchBarAddMovie__container {
+    display: flex;
+    row-gap: 2rem;
+    flex-direction: column;
+    min-width: 100%;
+
+    form {
+      width: 100%;
+
+    }
+  }
+}

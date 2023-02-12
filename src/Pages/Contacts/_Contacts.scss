@@ -3,7 +3,7 @@
   margin: auto;
   width: 70%;
   height: fit-content;
-  margin-top: 3rem;
+  margin-top: 7rem;
   border-radius: 12px;
   overflow: hidden;
   background-color: $component-bg-color;
@@ -33,5 +33,24 @@
 
   span {
     color: $most-important-element-color;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .contact__container {
+    width: 100%;
+    padding: 1rem;
+    flex-direction: column;
+
+    .contact__content {
+      line-height: 2rem;
+      padding: 0;
+      font-size: 1.3rem;
+
+      h4 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+    }
   }
 }

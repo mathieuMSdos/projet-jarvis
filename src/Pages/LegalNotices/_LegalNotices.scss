@@ -29,3 +29,19 @@
         padding: 3rem;
     }
 }
+
+@media screen and (max-width: 420px) {
+
+.legalNotices__container{
+    width: 100%;
+
+    span {
+        color: $most-important-element-color;
+        font-size: 1.5rem;
+        padding: 2rem 0rem;
+    }
+}
+
+
+
+}

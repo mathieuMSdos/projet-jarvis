@@ -10,7 +10,6 @@ export const CommonBtn = ({ textContent, bgColor }) => {
 
   useEffect(() => {
     window.addEventListener("resize", changeWidth);
-    console.log(width);
     // cleanup function
     return () => {
       window.removeEventListener("resize", changeWidth);

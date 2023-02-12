@@ -85,7 +85,7 @@ export const ShowMedia = () => {
               <h4>
                 <span>Titre</span>
               </h4>
-              <p>{mediaDatas.title}</p>
+              <p className="mediaShow__title-title">{mediaDatas.title}</p>
             </div>
 
             <motion.div

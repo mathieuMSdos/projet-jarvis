@@ -33,3 +33,12 @@
     background-color: $component-bg-color;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .yourMovie__container {
+    .yourMovie__actions {
+      padding:  0 1rem;
+
+    }
+  }
+}

@@ -34,7 +34,6 @@
     p {
       display: block;
       opacity: 1;
-
     }
   }
 
@@ -42,5 +41,19 @@
     font-size: 1.6rem;
     // padding: 0.25rem;
     padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .Btn-previous-page {
+    // width: 5rem;
+    height: 2rem;
+    justify-content: center;
+
+    i {
+      font-size: 1rem;
+      // padding: 0.25rem;
+      padding-right: 0;
+    }
   }
 }
