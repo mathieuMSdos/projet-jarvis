@@ -3,3 +3,9 @@
   padding: 0 2rem;
   min-height: 95vh;
 }
+
+@media screen and (max-width: 420px) {
+  .layout__content-container {
+    padding: 0 1rem;
+  }
+}

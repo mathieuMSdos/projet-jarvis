@@ -59,10 +59,17 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
+
+  .privateHome__container {
+    align-items: center;
+
+  }
+
   .privateHome__content-container {
     row-gap: 2rem;
     flex-direction: column;
+    align-items: center;
 
     .privateHome__header{
       display: flex;

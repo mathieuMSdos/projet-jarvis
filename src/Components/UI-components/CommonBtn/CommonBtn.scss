@@ -10,4 +10,14 @@ button {
   color: $title-color;
 }
 
+@media screen and (max-width: 420px) {
+  button {
+    min-width: 50px;
+    width: 50px;
+    padding: 0;
 
+    i {
+      font-size: 1.7rem;
+    }
+  }
+}
