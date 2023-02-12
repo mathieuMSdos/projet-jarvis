@@ -64,22 +64,34 @@
   .privateHome__container {
     align-items: center;
 
-  }
-
-  .privateHome__content-container {
-    row-gap: 2rem;
-    flex-direction: column;
-    align-items: center;
-
-    .privateHome__header{
-      display: flex;
-      flex-direction: column;
+    .privateHome__hello-container {
+      width: 100%;
+      text-align: center;
     }
 
     .privateHome__header{
-      display: flex;
-      flex-direction: column;
+
+      width: 100%;
     }
+
+    .privateHome__content-container {
+      row-gap: 2rem;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      .privateHome__cards-container {
+        width: 100%;
+      }
+
+      .mediaWheel__container {
+        width: 100%;
+      }
+  
+    }
+
   }
+
+  
 
 }

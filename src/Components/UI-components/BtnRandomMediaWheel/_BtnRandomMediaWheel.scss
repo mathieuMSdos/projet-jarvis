@@ -39,3 +39,12 @@
     }
   }
 }
+
+@media screen and (max-width: 420px) {
+  .button__randomMediaWheel-container {
+
+    .button__randomMediaWheel{
+      width: 150px;
+    }
+  }
+}
