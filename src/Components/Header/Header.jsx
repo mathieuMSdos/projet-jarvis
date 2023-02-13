@@ -177,7 +177,11 @@ export const Header = () => {
                   </li>
                   <li>
                     <NavLink
-                      onClick={toggleNav}
+                      onClick={() => {
+                        localStorage.removeItem("token");
+                        dispatch(setUserLog(null));
+                        toggleLogOut();
+                      }}
                       className={({ isActive }) =>
                         isActive ? "normalLinks activeLinks" : "normalLinks"
                       }
