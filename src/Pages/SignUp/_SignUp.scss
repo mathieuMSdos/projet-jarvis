@@ -14,7 +14,6 @@
     align-items: center;
     overflow: hidden;
 
-
     .signupImg__container {
       position: fixed;
       top: 40%;
@@ -67,6 +66,24 @@
       justify-content: center;
       width: 50%;
       // background-color: blue;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .signupPage__global-container {
+    .signup__container {
+      flex-direction: column;
+
+      .signup__title-container {
+        width: 100%;
+      }
+
+      .signUpPage__form-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
     }
   }
 }

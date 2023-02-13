@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { CommonBtn } from "../UI-components/CommonBtn/CommonBtn";
+import {SearchButton} from "../UI-components/SearchButton/SearchButton"
+
 import colorScss from "../../Style/_settings.scss";
 import { setAddMovieSearch } from "../../ReduxToolKit/Reducers/addMovieSearch.slice";
 
@@ -38,7 +39,7 @@ export const SearchBarAddMovie = () => {
           value={searchContent}
           onChange={(e) => setSearchContent(e.target.value)}
         />
-        <CommonBtn
+        <SearchButton
           textContent={"Rechercher"}
           bgColor={colorScss.mostImportantElementColor}
         />

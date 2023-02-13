@@ -124,3 +124,13 @@
     color: $most-important-element-color;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .signUp__form-container {
+    padding: 2rem 2rem;
+
+
+  }
+
+
+}

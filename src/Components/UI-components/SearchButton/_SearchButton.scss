@@ -1,4 +1,4 @@
-.common__btn {
+button {
   cursor: pointer;
   height: 50px;
   min-width: 154px;
@@ -11,10 +11,11 @@
 }
 
 @media screen and (max-width: 420px) {
-  .common__btn {
-    min-width: 154px;
+  button {
+    min-width: 50px;
     width: 50px;
     padding: 0;
+    
 
     i {
       font-size: 1.7rem;

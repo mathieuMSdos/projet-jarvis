@@ -89,3 +89,16 @@
     width: 2000px;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .animatedTitle__container {
+    padding: 3rem 3rem;
+
+    h1 {
+      text-align: center;
+      white-space: nowrap;
+      font-size: 1.7rem;
+      z-index: 1;
+    }
+  }
+}

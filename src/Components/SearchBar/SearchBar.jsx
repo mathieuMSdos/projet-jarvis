@@ -3,7 +3,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchPrivateHome } from "../../ReduxToolKit/Reducers/searchPrivateHome.slice";
-import { CommonBtn } from "../UI-components/CommonBtn/CommonBtn";
+import {SearchButton} from "../UI-components/SearchButton/SearchButton"
+
 import colorScss from "../../Style/_settings.scss";
 import { motion } from "framer-motion";
 import { setCancelSearch } from "../../ReduxToolKit/Reducers/cancelSearch.slice";
@@ -100,7 +101,7 @@ export const SearchBar = ({ endPoint }) => {
           ""
         )}
 
-        <CommonBtn
+        <SearchButton
           textContent={"Rechercher"}
           bgColor={colorScss.mostImportantElementColor}
         />
