@@ -27,7 +27,7 @@
   }
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (min-width: 420px) and (max-width: 820px) {
   .lastMediaAdded__container {
     .lastMediaAdded__card-container {
       align-items: center;
