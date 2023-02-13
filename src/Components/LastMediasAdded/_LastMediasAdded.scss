@@ -27,3 +27,22 @@
     }
   }
 }
+
+@media screen and (max-width: 770px) {
+
+  .lastMediaAdded__container {
+
+    .lastMediaAdded__card-container {
+      // flex-direction: column;
+      align-items: center;
+      row-gap: 1rem;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+
+    }
+  }
+
+}
+
