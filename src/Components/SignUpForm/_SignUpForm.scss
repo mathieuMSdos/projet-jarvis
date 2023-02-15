@@ -34,6 +34,7 @@
   }
 
   form {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -98,14 +99,15 @@
     .button {
       cursor: pointer;
       height: 50px;
-      width: fit-content;
+      min-width: 154px;
+      max-width: 180px;
       padding: 10px 30px;
       border-radius: 15px;
       border: none;
       background-color: $most-important-element-color;
       font-size: 1rem;
       color: $title-color;
-      width: auto;
+      margin: auto;
     }
   }
 
